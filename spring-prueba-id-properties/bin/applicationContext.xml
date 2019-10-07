@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Carga de archivo de propiedades -->
+	
+	<context:property-placeholder location="classpath:prueba.propiedades"/>
+	
+	<!-- Zona de definición de nuestros benas -->
+	<bean id="saludoFormal" class="com.trifulcas.springprueba.Formal"></bean>
+	<bean id="saludoInformal"
+		class="com.trifulcas.springprueba.Informal">
+
+	</bean>
+	<bean id="miSaludo" class="com.trifulcas.springprueba.Saludos">
+		<property name="saludo" ref="saludoFormal"></property>
+
+	</bean>
+
+	<bean id="miVecino" class="com.trifulcas.springprueba.Vecino">
+		<property name="saludo" ref="saludoInformal"></property>
+		<property name="nombre" value="${prueba.nombre}"></property>
+	</bean>
+</beans>
