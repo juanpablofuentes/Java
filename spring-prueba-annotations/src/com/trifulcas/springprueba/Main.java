@@ -10,11 +10,16 @@ public class Main {
 
 		// Pedir el bean
 		ISaludo miSaludo = context.getBean("miSaludo", Saludos.class);
-		
+
 		// Ejecutar algún método
 		System.out.println(miSaludo.hola());
-		
-	
+
+		// Pedir el bean
+		ISaludo miVecino = context.getBean("vecino", Vecino.class);
+
+		// Ejecutar algún método
+		System.out.println(miVecino.hola());
+
 		// Cerrar el contexto
 		context.close();
 	}

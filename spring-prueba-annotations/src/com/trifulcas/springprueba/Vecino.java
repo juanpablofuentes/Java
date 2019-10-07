@@ -1,5 +1,8 @@
 package com.trifulcas.springprueba;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Vecino implements ISaludo {
 
 	@Override
