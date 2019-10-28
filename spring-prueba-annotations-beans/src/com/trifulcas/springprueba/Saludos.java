@@ -1,8 +1,5 @@
 package com.trifulcas.springprueba;
 
-import org.springframework.stereotype.Component;
-
-@Component("miSaludo")
 public class Saludos implements ISaludo {
 
 	public String hola() {

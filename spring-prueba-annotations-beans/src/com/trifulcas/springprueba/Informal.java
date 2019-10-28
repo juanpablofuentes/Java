@@ -1,8 +1,5 @@
 package com.trifulcas.springprueba;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Informal implements ISaludo {
 
 	@Override
