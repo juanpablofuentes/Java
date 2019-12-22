@@ -1,0 +1,10 @@
+{
+	"id": 14,
+	"nombre": "Pera",
+	"referencia": "Pera conferencia",
+	"precio": 20,
+	"categoria":{"id":1,
+				"nombre":"Frutas",
+				"descripcion":"Recogidas del árbol"},
+	"zonas":["Girona","Albacete","La Rioja"]
+}
